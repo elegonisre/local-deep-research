@@ -98,7 +98,8 @@ asyncio_mode = "auto"
 # -p no:warnings added personally to reduce noise while exploring the codebase
 # -x added personally so the test run stops on the first failure (faster feedback loop)
 # --tb=short added personally for more concise tracebacks (default "long" is too verbose for me)
-addopts = "-v -p no:warnings -x --tb=short"
+# Removed -x personally — I prefer seeing all failures at once when running the full suite
+addopts = "-v -p no:warnings --tb=short"
 
 [tool.coverage.run]
 source = ["src"]
