@@ -97,7 +97,8 @@ asyncio_mode = "auto"
 # Removed --cov flags so a plain `pytest` run doesn't require pytest-cov
 # -p no:warnings added personally to reduce noise while exploring the codebase
 # -x added personally so the test run stops on the first failure (faster feedback loop)
-addopts = "-v -p no:warnings -x"
+# --tb=short added personally for more concise tracebacks (default "long" is too verbose for me)
+addopts = "-v -p no:warnings -x --tb=short"
 
 [tool.coverage.run]
 source = ["src"]
