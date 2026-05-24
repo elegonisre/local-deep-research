@@ -94,7 +94,8 @@ ignore_missing_imports = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
-addopts = "--cov=local_deep_research --cov-report=term-missing"
+# Removed --cov flags so a plain `pytest` run doesn't require pytest-cov
+addopts = "-v"
 
 [tool.coverage.run]
 source = ["src"]
